@@ -1,16 +1,28 @@
 import React from 'react';
 import Head from 'next/head';
-import type { GetServerSideProps, NextPage } from 'next';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-import dbConnect from '../../contentManagementSystem/lib/mongodb';
-import Blog from '../../contentManagementSystem/models/Blog';
-import { BlogPost, normalizeBlogPost } from '../../lib/blogs';
+import { blogs as staticBlogs } from '../../data/blogs';
+import { BlogPost } from '../../lib/blogs';
 
 interface BlogPostPageProps {
     blog: BlogPost | null;
+}
+
+function toBlogPost(blog: (typeof staticBlogs)[number]): BlogPost {
+    return {
+        id: blog.id,
+        slug: blog.id,
+        title: blog.title,
+        excerpt: blog.excerpt,
+        content: blog.content,
+        date: blog.date,
+        image: blog.image,
+        category: blog.category,
+        author: blog.author,
+        isPublished: true,
+    };
 }
 
 const BlogPostPage: NextPage<BlogPostPageProps> = ({ blog }) => {
@@ -18,11 +30,9 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({ blog }) => {
     if (!blog) {
         return (
             <div className="flex flex-col min-h-screen">
-                <Header />
                 <div className="flex-grow flex items-center justify-center">
                     <h1 className="text-2xl font-bold">Blog post not found</h1>
                 </div>
-                <Footer />
             </div>
         );
     }
@@ -83,31 +93,20 @@ const BlogPostPage: NextPage<BlogPostPageProps> = ({ blog }) => {
 
 export default BlogPostPage;
 
-export const getServerSideProps: GetServerSideProps<BlogPostPageProps> = async (ctx) => {
+export const getStaticPaths: GetStaticPaths = async () => {
+    return {
+        paths: staticBlogs.map((blog) => ({ params: { id: blog.id } })),
+        fallback: false,
+    };
+};
+
+export const getStaticProps: GetStaticProps<BlogPostPageProps> = async (ctx) => {
     const id = Array.isArray(ctx.params?.id) ? ctx.params?.id[0] : ctx.params?.id;
-
-    if (!id) {
-        return { props: { blog: null } };
-    }
-
-    await dbConnect();
-
-    const doc = await Blog.findOne({
-        slug: id,
-        isDeleted: false,
-        isPublished: true,
-    }).lean();
-
-    if (!doc) {
-        return { props: { blog: null } };
-    }
+    const blog = staticBlogs.find((entry) => entry.id === id);
 
     return {
         props: {
-            blog: normalizeBlogPost({
-                ...doc,
-                _id: String(doc._id),
-            }),
+            blog: blog ? toBlogPost(blog) : null,
         },
     };
 };

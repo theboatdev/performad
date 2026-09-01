@@ -12,7 +12,7 @@ const BlogGrid: React.FC<BlogGridProps> = ({ blogs }) => {
             <div className="py-16 text-center border border-dashed rounded-2xl border-gray-200 bg-gray-50">
                 <h3 className="text-2xl font-bold text-gray-900">No blog posts yet</h3>
                 <p className="mt-3 text-gray-600">
-                    Add and publish a post from the admin dashboard to see it here.
+                    Check back soon for new articles.
                 </p>
             </div>
         );

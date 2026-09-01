@@ -1,16 +1,29 @@
 import React, { useMemo, useState } from 'react';
-import Head from 'next/head';
 import BlogHero from '../../components/blogs/BlogHero';
 import BlogFilter from '../../components/blogs/BlogFilter';
 import FeaturedBlogs from '../../components/blogs/FeaturedBlogs';
 import BlogGrid from '../../components/blogs/BlogGrid';
-import type { GetServerSideProps, NextPage } from 'next';
-import dbConnect from '../../contentManagementSystem/lib/mongodb';
-import Blog from '../../contentManagementSystem/models/Blog';
-import { BlogPost, getBlogCategories, normalizeBlogPost } from '../../lib/blogs';
+import type { GetStaticProps, NextPage } from 'next';
+import { blogs as staticBlogs } from '../../data/blogs';
+import { BlogPost, getBlogCategories } from '../../lib/blogs';
 
 interface BlogsPageProps {
     blogs: BlogPost[];
+}
+
+function toBlogPost(blog: (typeof staticBlogs)[number]): BlogPost {
+    return {
+        id: blog.id,
+        slug: blog.id,
+        title: blog.title,
+        excerpt: blog.excerpt,
+        content: blog.content,
+        date: blog.date,
+        image: blog.image,
+        category: blog.category,
+        author: blog.author,
+        isPublished: true,
+    };
 }
 
 const BlogsPage: NextPage<BlogsPageProps> = ({ blogs }) => {
@@ -61,22 +74,10 @@ const BlogsPage: NextPage<BlogsPageProps> = ({ blogs }) => {
 
 export default BlogsPage;
 
-export const getServerSideProps: GetServerSideProps<BlogsPageProps> = async () => {
-    await dbConnect();
-
-    const docs = await Blog.find({
-        isDeleted: false,
-        isPublished: true,
-    })
-        .sort({ publishedAt: -1, createdAt: -1 })
-        .lean();
-
+export const getStaticProps: GetStaticProps<BlogsPageProps> = async () => {
     return {
         props: {
-            blogs: docs.map((blog) => normalizeBlogPost({
-                ...blog,
-                _id: String(blog._id),
-            })),
+            blogs: staticBlogs.map(toBlogPost),
         },
     };
 };
