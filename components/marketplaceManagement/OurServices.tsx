@@ -9,11 +9,11 @@ type Service = {
 };
 
 const services: Service[] = [
-  { title: "Marketplace Account Management",CardImage:"/RectangleHero.png", description: "Your Marketplace account is treated like a business not a dashboard. We handle daily operations, compliance, performance monitoring and execution to ensure your account runs smoothly, stays protected, and scales sustainably.",CardSize:"m" },
-  { title: "Product Listing Optimization",CardImage:"/RectangleHero.png", description: "Visibility converts when done right. We optimize titles, bullet points, descriptions, backend keywords, and A+ content to improve rankings, click-through rates, and conversions aligned with real buyer intent.",CardSize:"m" },
-  { title: "PPC Strategy & Management",CardImage:"/RectangleHero.png", description: "Paid ads are only powerful when structured correctly. We build and manage data-driven PPC strategies focused on RoAS, TACoS(Total Advertising Cost of Sales) and Ad spend.",CardSize:"m" },
-  { title: "Design & Enhanced Image Optimization",CardImage:"/RectangleHero.png", description: "Your product visuals sell before your copy does. We provide product image guides and optimized A+/Enhanced Visual layouts to improve CTR, trust, and conversion rate while staying fully compliant with marketplace guidelines.",CardSize:"l" },
-  { title: "Competitor & Marketplace Insights",CardImage:"/RectangleHero.png", description: "We don’t guess we analyze data. From competitor pricing and keyword positioning to category trends and demand shifts, we turn marketplace data into strategic advantages.",CardSize:"l" },
+  { title: "Marketplace Account Management",CardImage:"/marketplace/Marketplace Account Management.jpg", description: "Your Marketplace account is treated like a business not a dashboard. We handle daily operations, compliance, performance monitoring and execution to ensure your account runs smoothly, stays protected, and scales sustainably.",CardSize:"m" },
+  { title: "Product Listing Optimization",CardImage:"/marketplace/Product Listing Optimization.jpg", description: "Visibility converts when done right. We optimize titles, bullet points, descriptions, backend keywords, and A+ content to improve rankings, click-through rates, and conversions aligned with real buyer intent.",CardSize:"m" },
+  { title: "PPC Strategy & Management",CardImage:"/marketplace/PPC Strategy & Management.jpg", description: "Paid ads are only powerful when structured correctly. We build and manage data-driven PPC strategies focused on RoAS, TACoS(Total Advertising Cost of Sales) and Ad spend.",CardSize:"m" },
+  { title: "Design & Enhanced Image Optimization",CardImage:"/marketplace/Design & Enhanced Image Optimization.jpg", description: "Your product visuals sell before your copy does. We provide product image guides and optimized A+/Enhanced Visual layouts to improve CTR, trust, and conversion rate while staying fully compliant with marketplace guidelines.",CardSize:"l" },
+  { title: "Competitor & Marketplace Insights",CardImage:"/marketplace/Competitor & Marketplace Insights (1).jpg", description: "We don’t guess we analyze data. From competitor pricing and keyword positioning to category trends and demand shifts, we turn marketplace data into strategic advantages.",CardSize:"l" },
 ];
 
 export default function OurSevices() {

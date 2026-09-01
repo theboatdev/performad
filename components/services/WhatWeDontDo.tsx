@@ -8,10 +8,10 @@ interface ListItemProps {
 const Icon = () => (
   <div className="bg-primary rounded-lg px-2 items-center">
     <Image
-      src={'/icon.png'}
-      width={"10px"}
-      height={"10px"}
-      className=""
+      src="/icon.png"
+      width="10"
+      height="10"
+      alt=""
     />
   </div>
 );
@@ -42,8 +42,14 @@ export default function WhatWeDontDo() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          {/* Image Placeholder */}
-          <div className="w-full h-64 bg-gray-200 rounded-xl shadow-inner"></div>
+          <div className="relative w-full h-64 rounded-xl">
+            <Image
+              src="/What we don't do.jpg"
+              alt="What we don't do"
+              layout="fill"
+              className="object-cover rounded-xl shadow-lg"
+            />
+          </div>
 
           {/* List Items */}
           <div className="flex flex-col gap-6">

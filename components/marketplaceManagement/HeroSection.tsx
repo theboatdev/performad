@@ -35,7 +35,7 @@ export default function HeroSection() {
 
           {/* Front Image */}
           <Image
-            src="/RectangleHero.png"
+            src="/marketplace/Marketplace Page Hero.jpg"
             alt="Foreground"
             layout="fill"
             className="rounded-lg shadow-lg absolute top-0 left-0 object-cover z-10"

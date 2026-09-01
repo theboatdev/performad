@@ -28,8 +28,8 @@ export default function HeroSection({ title, subtitle, description }: Props) {
           </div>
         </div>
       </section>
-      <div className="md:w-1/2 p-6 bg-primary rounded-lg">
-        <Image src="/RectangleHero.png" alt="About us" width={508} height={312} className="rounded-lg shadow-lg" />
+      <div className="md:w-1/2 p-4 bg-primary rounded-lg">
+        <Image src="/About Page Hero.jpg" alt="About us" width={508} height={312} className="rounded-lg shadow-lg" />
       </div>
     </div>
   );

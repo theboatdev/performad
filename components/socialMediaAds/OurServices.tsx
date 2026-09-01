@@ -9,11 +9,11 @@ type Service = {
 };
 
 const services: Service[] = [
-  { title: "360 Social Media Advertising Strategy",CardImage:"/RectangleHero.png", description: "We don’t run ads in isolation. We build full-funnel paid social strategies aligned to your business goals—mapping awareness, consideration, and conversion campaigns into one cohesive growth system.",CardSize:"m" },
-  { title: "Advertising Content Strategy",CardImage:"/RectangleHero.png", description: "Creative is the biggest performance lever in paid social. We develop content frameworks tailored to platform behavior, audience intent, and funnel stage—your ads then resonate, stop the scroll, and convert.",CardSize:"m" },
-  { title: "Audience A/B Testing",CardImage:"/RectangleHero.png", description: "Assumptions kill performance. We test audiences, creatives, formats, and messaging continuously—using structured A/B testing to identify what truly drives conversions at scale",CardSize:"m" },
-  { title: "Advertising Tracking Setup",CardImage:"/RectangleHero.png", description: "If tracking is broken, everything else is noise. We implement accurate tracking across platforms using pixels, conversion APIs, event mapping, and attribution alignment—performance decisions are based on real data.",CardSize:"l" },
-  { title: "Comprehensive Analysis & Data Reporting",CardImage:"/RectangleHero.png", description: "Data without insight is useless. We analyze performance across creatives, audiences, and funnel stages—translating numbers into clear actions that improve ROAS and scalability.",CardSize:"l" },
+  { title: "360 Social Media Advertising Strategy",CardImage:"/socialMedia/360 Social Media Advertising Strategy.jpg", description: "We don’t run ads in isolation. We build full-funnel paid social strategies aligned to your business goals—mapping awareness, consideration, and conversion campaigns into one cohesive growth system.",CardSize:"m" },
+  { title: "Advertising Content Strategy",CardImage:"/socialMedia/Advertising Content Strategy.jpg", description: "Creative is the biggest performance lever in paid social. We develop content frameworks tailored to platform behavior, audience intent, and funnel stage—your ads then resonate, stop the scroll, and convert.",CardSize:"m" },
+  { title: "Audience A/B Testing",CardImage:"/socialMedia/Audience A_B Testing.jpg", description: "Assumptions kill performance. We test audiences, creatives, formats, and messaging continuously—using structured A/B testing to identify what truly drives conversions at scale",CardSize:"m" },
+  { title: "Advertising Tracking Setup",CardImage:"/socialMedia/Advertising Tracking Setup.jpg", description: "If tracking is broken, everything else is noise. We implement accurate tracking across platforms using pixels, conversion APIs, event mapping, and attribution alignment—performance decisions are based on real data.",CardSize:"l" },
+  { title: "Comprehensive Analysis & Data Reporting",CardImage:"/socialMedia/Comprehensive Analysis & Data Reporting.jpg", description: "Data without insight is useless. We analyze performance across creatives, audiences, and funnel stages—translating numbers into clear actions that improve ROAS and scalability.",CardSize:"l" },
 ];
 
 export default function OurSevices() {

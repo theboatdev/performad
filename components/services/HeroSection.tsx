@@ -27,7 +27,7 @@ export default function HeroSection() {
         <div className="relative w-full max-w-sm h-56 sm:h-72 md:h-80">
           {/* Back Image */}
           <Image
-            src="/RectangleHero.png"
+            src="/seo/SEO Page Hero.jpg"
             alt="Background"
             layout="fill"
             className="rounded-lg shadow-lg absolute top-6 left-6 object-cover"
@@ -35,7 +35,7 @@ export default function HeroSection() {
 
           {/* Front Image */}
           <Image
-            src="/RectangleHero.png"
+            src="/seo/SEO Page Hero.jpg"
             alt="Foreground"
             layout="fill"
             className="rounded-lg shadow-lg absolute top-0 left-0 object-cover z-10"

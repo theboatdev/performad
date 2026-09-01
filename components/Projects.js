@@ -7,35 +7,35 @@ const projects = [
     title: "PAD Ongoing Expert Management",
     description:
       "PAD ongoing management is designed to take your stress away. The PAD team will handle everything, take care of operations, and report directly to you. This approach allows you to focus on business development without worrying about campaign or marketplace shop performance.",
-    image: "/port1.jpg",
+    image: "/homePage/PAD Ongoing Expert Management.jpg",
     size: "l",
   },
   {
     title: "PAD One-Time Strong Setup",
     description:
       "Get a robust foundation for your campaigns with a one-time setup by the PAD team. This service ensures your marketplace or advertising campaigns are optimized for success from the start.",
-    image: "/port2.jpg",
+    image: "/homePage/PAD One-Time Strong Setup.jpg",
     size: "l",
   },
   {
     title: "Ongoing or One-Time Consulting",
     description:
       "PAD team provides one-time or ongoing step-by-step guidance with data-driven prioritization & optimizations. Ideal for agencies and companies with an in-house team seeking expert insights.",
-    image: "/port3.jpg",
+    image: "/homePage/Ongoing or One-Time Consulting.jpg",
     size: "m",
   },
   {
     title: "Deep One-Time Audit",
     description:
       "Curious if your current setup is effective? PAD team conducts a thorough audit of your entire strategy and setup for a one-time cost, providing insights into areas of improvement.",
-    image: "/port4.jpg",
+    image: "/homePage/Deep One-Time Audit.jpg",
     size: "m",
   },
   {
     title: "Committed Performance",
     description:
       "Revenue split partnership—less risk for you, higher reward for us. This model ensures PAD is fully invested in your success.",
-    image: "/port5.jpg",
+    image: "/homePage/Committed Performance.jpg",
     size: "m",
   },
 ];
