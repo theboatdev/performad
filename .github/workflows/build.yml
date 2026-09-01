@@ -1,0 +1,39 @@
+name: build and push 
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    
+    env:
+      REGISTRY: ghcr.io
+      IMAGE_name: ghcr.io/teamrootfo/performad
+
+      TIMESTAMP: ${{ github.run_number }}-${{ github.sha }}
+    
+    permissions:
+      contents: read
+      packages: write  
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          push: true
+          tags: |
+            ${{ env.IMAGE_name }}:${{ env.TIMESTAMP }}
+            ${{ env.IMAGE_name }}:latest

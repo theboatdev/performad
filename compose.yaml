@@ -1,0 +1,21 @@
+services:
+  javascript-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: javascript-app:latest
+    container_name: javascript-app
+    ports:
+      - "3000:3000"  # Next.js app exposed on port 3000
+    restart: unless-stopped
+    init: true
+    # env_file: ./.env  # Uncomment if .env file exists
+    # Add external service dependencies here if needed
+    # depends_on:
+    #   - <external-service>
+    # networks:
+    #   - appnet
+
+# No external services detected in README, Dockerfile, or source code
+# No volumes section included as there are no persistent data requirements
+# No networks section included as only one service is present
