@@ -26,7 +26,7 @@ export default function HeroSection() {
       <div className="w-full md:w-1/2 flex justify-center relative">
         <div className="relative w-full max-w-sm h-56 sm:h-72 md:h-80">
           {/* Back Image */}
-          <Image
+          <Image unoptimized
             src="/RectangleHero.png"
             alt="Background"
             layout="fill"
@@ -34,7 +34,7 @@ export default function HeroSection() {
           />
 
           {/* Front Image */}
-          <Image
+          <Image unoptimized
             src="/marketplace/Marketplace Page Hero.jpg"
             alt="Foreground"
             layout="fill"

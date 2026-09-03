@@ -17,7 +17,7 @@ export default function Content({ heading, description }: Props) {
           </p>
         </div>
         <div className="flex-1 flex justify-center">
-          <Image src={logo} width={400} height={400} alt="Logo" className="opacity-70 w-64 sm:w-80 lg:w-[500px] h-auto" />
+          <Image unoptimized src={logo} width={400} height={400} alt="Logo" className="opacity-70 w-64 sm:w-80 lg:w-[500px] h-auto" />
         </div>
       </div>
     </div>

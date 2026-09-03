@@ -48,7 +48,7 @@ export default function FAQSection({ faqs }: Props) {
           </div>
 
           <div className="hidden md:flex mt-10 md:mt-10 md:ml-6">
-            <Image src="/images/QAABackground.png" alt="FAQ Background" width={350} height={450} className="object-cover rounded-xl" />
+            <Image unoptimized src="/images/QAABackground.png" alt="FAQ Background" width={350} height={450} className="object-cover rounded-xl" />
           </div>
         </div>
       </div>

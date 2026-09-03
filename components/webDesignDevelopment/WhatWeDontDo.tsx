@@ -7,7 +7,7 @@ interface ListItemProps {
 
 const Icon = () => (
   <div className="bg-primary rounded-lg px-2 items-center">
-    <Image
+    <Image unoptimized
       src={'/icon.png'}
       width={"10px"}
       height={"10px"}
@@ -43,7 +43,7 @@ export default function WhatWeDontDo() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="relative w-full h-64 rounded-xl">
-            <Image
+            <Image unoptimized
               src="/What we don't do.jpg"
               alt="What we don't do"
               layout="fill"

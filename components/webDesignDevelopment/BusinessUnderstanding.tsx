@@ -8,7 +8,7 @@ interface CardProps {
 
 const Icon = () => (
   <div className="bg-primary rounded-lg px-2 items-center">
-    <Image
+    <Image unoptimized
       src={'/icon.png'}
       width={"25px"}
       height={"25px"}

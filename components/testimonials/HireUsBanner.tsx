@@ -6,7 +6,7 @@ const HireUsBanner: React.FC = () => {
     <section className="bg-primary relative text-white py-20 px-6 text-center overflow-hidden mb-10">
       {/* Background shapes */}
       <div className="absolute inset-0 opacity-20 pl-96 pt-3">
-            <Image
+            <Image unoptimized
                 src="/icon.png" 
                 alt="logo"
                 width={372}

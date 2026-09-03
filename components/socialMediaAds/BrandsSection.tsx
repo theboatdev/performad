@@ -57,7 +57,7 @@ export default function BrandsSection() {
                             {featuresWithout.map((item, idx) => (
                                 <li key={idx} className="flex items-center gap-3 md:ml-14">
                                     <div className="bg-primary rounded-lg px-2 py-2 flex items-center justify-center">
-                                        <Image
+                                        <Image unoptimized
                                             src={"/icon.png"}
                                             width={20}
                                             height={20}
@@ -82,7 +82,7 @@ export default function BrandsSection() {
                             {featuresWith.map((item, idx) => (
                                 <li key={idx} className="flex items-start gap-3 md:ml-14">
                                     <div className="bg-white rounded-lg px-2 py-2 flex items-center justify-center">
-                                        <Image
+                                        <Image unoptimized
                                             src={"/favicon.png"}
                                             width={20}
                                             height={20}

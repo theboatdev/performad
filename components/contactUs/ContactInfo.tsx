@@ -27,7 +27,7 @@ export default function ContactInfo({ email, phone, address }: Props) {
         {contacts.map((info, index) => (
           <div key={index} className="bg-teal-500 p-4 rounded shadow">
             <div className="flex flex-row items-center gap-4">
-              <Image src={"/icon.png"} width={45} height={45} alt="contact icon" />
+              <Image unoptimized src={"/icon.png"} width={45} height={45} alt="contact icon" />
               <div className="w-56">
                 <h3 className="font-medium text-white">{info.name}</h3>
                 {info.detail && <p className="text-sm text-white">{info.detail}</p>}

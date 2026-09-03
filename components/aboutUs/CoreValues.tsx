@@ -23,7 +23,7 @@ export default function CoreValues({ coreValues }: Props) {
           {list.map((value, index) => (
             <div key={index} className="relative bg-white border border-primary rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 flex flex-col overflow-hidden">
               <div className="flex items-center mb-4">
-                <Image src="/coreValues/balance.png" alt={value.title} width={48} height={48} className="p-2 bg-gray-100 rounded-lg" />
+                <Image unoptimized src="/coreValues/balance.png" alt={value.title} width={48} height={48} className="p-2 bg-gray-100 rounded-lg" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 text-left mb-3">{value.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-10 text-justify">{value.description}</p>

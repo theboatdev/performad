@@ -167,7 +167,7 @@ export default function Portfolio() {
                   transition={{ duration: 0.6, delay: i * 0.15 }}
                 >
                   <div className="relative w-full h-60 rounded-lg"> 
-                    <Image
+                    <Image unoptimized
                       src={service.image} 
                       alt="About us"
                       layout="fill"
@@ -193,7 +193,7 @@ export default function Portfolio() {
                   transition={{ duration: 0.6, delay: i * 0.15 }}
                 >
                   <div className="relative w-full h-60 rounded-lg"> 
-                    <Image
+                    <Image unoptimized
                       src={service.image}
                       alt="About us"
                       layout="fill"

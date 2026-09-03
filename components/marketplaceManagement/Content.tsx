@@ -20,7 +20,7 @@ export default function Content() {
 
         {/* Right graphic placeholder */}
         <div className="flex-1 flex justify-center py-5">
-          <Image
+          <Image unoptimized
             src={logo}
             width={400}
             height={400}

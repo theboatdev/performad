@@ -30,7 +30,7 @@ export default function OurSevices() {
           service.CardSize === 'm' && (
             <div key={i} className="bg-white rounded-lg pb-6 shadow hover:shadow-lg transition">
               <div className="relative w-full h-60 rounded-lg"> 
-                <Image
+                <Image unoptimized
                   src={service.CardImage}
                   alt="About us"
                   layout="fill"
@@ -48,7 +48,7 @@ export default function OurSevices() {
           service.CardSize === 'l' && (
             <div key={i} className="bg-white  rounded-lg pb-6 shadow hover:shadow-lg transition col-span-2">
               <div className="relative w-full h-60 rounded-lg"> 
-                <Image
+                <Image unoptimized
                   src={service.CardImage} 
                   alt="About us"
                   layout="fill"
