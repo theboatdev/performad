@@ -22,9 +22,7 @@ export default function Header() {
         <div className="flex flex-row items-center justify-between p-4">
           {/* Logo */}
           <Link href="/">
-            <a>
-              <img src="/images/logo.png" width={150} height={20} alt="Logo" />
-            </a>
+            <img src="/images/logo.png" width={150} height={20} alt="Logo" />
           </Link>
 
           {/* Hamburger Menu Button (Mobile) */}
@@ -82,6 +80,9 @@ function NavLinks({ closeMenu, isMobile }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [dropdown2Open, setDropdown2Open] = useState(false);
 
+  const dropdownLinkClass =
+    "block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#22A18D] transition-colors";
+
   return (
     <ul className={`${isMobile ? "flex flex-col space-y-6" : "flex flex-wrap items-center justify-end flex-grow gap-2 pr-4 space-x-2 md:gap-6 md:space-x-6"}`}>
       {/* Services Dropdown */}
@@ -114,76 +115,72 @@ function NavLinks({ closeMenu, isMobile }) {
             }
           `}
         >
-          <Link href="/services">
-            <a
-              className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#22A18D] transition-colors"
-              onClick={() => {
-                setDropdownOpen(false);
-                closeMenu && closeMenu();
-              }}
-            >
-              SEO
-            </a>
+          <Link
+            href="/services"
+            className={dropdownLinkClass}
+            onClick={() => {
+              setDropdownOpen(false);
+              closeMenu && closeMenu();
+            }}
+          >
+            SEO
           </Link>
-          <Link href="/googleAds">
-            <a
-              className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#22A18D] transition-colors"
-              onClick={() => {
-                setDropdownOpen(false);
-                closeMenu && closeMenu();
-              }}
-            >
-              Google Ads
-            </a>
+          <Link
+            href="/googleAds"
+            className={dropdownLinkClass}
+            onClick={() => {
+              setDropdownOpen(false);
+              closeMenu && closeMenu();
+            }}
+          >
+            Google Ads
           </Link>
-          <Link href="/socialMediaAds">
-            <a
-              className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#22A18D] transition-colors"
-              onClick={() => {
-                setDropdownOpen(false);
-                closeMenu && closeMenu();
-              }}
-            >
-              Social Media Ads
-            </a>
+          <Link
+            href="/socialMediaAds"
+            className={dropdownLinkClass}
+            onClick={() => {
+              setDropdownOpen(false);
+              closeMenu && closeMenu();
+            }}
+          >
+            Social Media Ads
           </Link>
-          <Link href="/marketplaceManagement">
-            <a
-              className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#22A18D] transition-colors"
-              onClick={() => {
-                setDropdownOpen(false);
-                closeMenu && closeMenu();
-              }}
-            >
-              Marketplace Management
-            </a>
+          <Link
+            href="/marketplaceManagement"
+            className={dropdownLinkClass}
+            onClick={() => {
+              setDropdownOpen(false);
+              closeMenu && closeMenu();
+            }}
+          >
+            Marketplace Management
           </Link>
-          <Link href="/webDesignDevelopment">
-            <a
-              className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#22A18D] transition-colors"
-              onClick={() => {
-                setDropdownOpen(false);
-                closeMenu && closeMenu();
-              }}
-            >
-              Web Design And Development
-            </a>
+          <Link
+            href="/webDesignDevelopment"
+            className={dropdownLinkClass}
+            onClick={() => {
+              setDropdownOpen(false);
+              closeMenu && closeMenu();
+            }}
+          >
+            Web Design And Development
           </Link>
         </div>
       </li>
 
       {[
         { href: "/blogs", label: "Blogs" },
+        { href: "/career", label: "Careers" },
         { href: "/aboutUs", label: "About" },
       ].map((item) => (
         <li key={item.href}>
-          <a
+          <Link
             href={item.href}
             className="text-lg font-semibold text-gray-800 hover:text-gray-700 transition-colors"
             onClick={closeMenu}
           >
             {item.label}
-          </a>
+          </Link>
         </li>
       ))}
       <li
@@ -215,38 +212,35 @@ function NavLinks({ closeMenu, isMobile }) {
             }
           `}
         >
-          <Link href="/milestones-xversion">
-            <a
-              className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#22A18D] transition-colors"
-              onClick={() => {
-                setDropdown2Open(false);
-                closeMenu && closeMenu();
-              }}
-            >
-              XVERSION
-            </a>
+          <Link
+            href="/milestones-xversion"
+            className={dropdownLinkClass}
+            onClick={() => {
+              setDropdown2Open(false);
+              closeMenu && closeMenu();
+            }}
+          >
+            XVERSION
           </Link>
-          <Link href="/milestones-active">
-            <a
-              className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#22A18D] transition-colors"
-              onClick={() => {
-                setDropdown2Open(false);
-                closeMenu && closeMenu();
-              }}
-            >
-              Active Products
-            </a>
+          <Link
+            href="/milestones-active"
+            className={dropdownLinkClass}
+            onClick={() => {
+              setDropdown2Open(false);
+              closeMenu && closeMenu();
+            }}
+          >
+            Active Products
           </Link>
-          <Link href="/milestones-gnzbioscience">
-            <a
-              className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-[#22A18D] transition-colors"
-              onClick={() => {
-                setDropdown2Open(false);
-                closeMenu && closeMenu();
-              }}
-            >
-              GNZ - Bio Science
-            </a>
+          <Link
+            href="/milestones-gnzbioscience"
+            className={dropdownLinkClass}
+            onClick={() => {
+              setDropdown2Open(false);
+              closeMenu && closeMenu();
+            }}
+          >
+            GNZ - Bio Science
           </Link>
         </div>
       </li>
@@ -254,13 +248,13 @@ function NavLinks({ closeMenu, isMobile }) {
         { href: "/contactUs", label: "Contact" },
       ].map((item) => (
         <li key={item.href}>
-          <a
+          <Link
             href={item.href}
             className="text-lg font-semibold text-gray-800 hover:text-gray-700 transition-colors"
             onClick={closeMenu}
           >
             {item.label}
-          </a>
+          </Link>
         </li>
       ))}
 

@@ -15,10 +15,17 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Milestones.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "components/Milestones.js"
+  ],
   "exclude": ["node_modules"]
 }

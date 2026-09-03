@@ -32,7 +32,7 @@ export default function OurSevices() {
                 <Image unoptimized
                   src={service.CardImage}
                   alt="About us"
-                  layout="fill"
+                  fill
                   className="object-cover rounded-t-lg"
                 />
               </div>
@@ -50,7 +50,7 @@ export default function OurSevices() {
                 <Image unoptimized
                   src={service.CardImage} 
                   alt="About us"
-                  layout="fill"
+                  fill
                   className="object-cover rounded-t-lg"
                 />
               </div>

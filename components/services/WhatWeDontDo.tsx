@@ -46,7 +46,7 @@ export default function WhatWeDontDo() {
             <Image unoptimized
               src="/What we don't do.jpg"
               alt="What we don't do"
-              layout="fill"
+              fill
               className="object-cover rounded-xl shadow-lg"
             />
           </div>

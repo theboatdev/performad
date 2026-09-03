@@ -170,7 +170,7 @@ export default function Portfolio() {
                     <Image unoptimized
                       src={service.image} 
                       alt="About us"
-                      layout="fill"
+                      fill
                       className="object-cover rounded-t-lg"
                     />
                   </div>
@@ -196,7 +196,7 @@ export default function Portfolio() {
                     <Image unoptimized
                       src={service.image}
                       alt="About us"
-                      layout="fill"
+                      fill
                       className="object-cover rounded-t-lg"
                     />
                   </div>

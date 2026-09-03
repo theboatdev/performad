@@ -10,9 +10,10 @@ const Icon = () => (
   <div className="bg-primary rounded-lg px-2 items-center">
     <Image unoptimized
       src={'/icon.png'}
-      width={"25px"}
-      height={"25px"}
+      width={25}
+      height={25}
       className=""
+      alt=""
     />
   </div>
 );

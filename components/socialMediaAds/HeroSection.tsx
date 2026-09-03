@@ -29,7 +29,7 @@ export default function HeroSection() {
           <Image unoptimized
             src="/RectangleHero.png"
             alt="Background"
-            layout="fill"
+            fill
             className="rounded-lg shadow-lg absolute top-6 left-6 object-cover"
           />
 
@@ -37,7 +37,7 @@ export default function HeroSection() {
           <Image unoptimized
             src="/socialMedia/Social Media Ads Page Hero.jpg"
             alt="Foreground"
-            layout="fill"
+            fill
             className="rounded-lg shadow-lg absolute top-0 left-0 object-cover z-10"
           />
         </div>

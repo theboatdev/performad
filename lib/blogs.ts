@@ -4,6 +4,7 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   content: string[];
+  body?: unknown[] | null;
   date: string;
   image: string;
   category: string;
@@ -20,6 +21,7 @@ type BlogSource = {
   title?: string;
   excerpt?: string;
   content?: string[];
+  body?: unknown[];
   image?: string;
   category?: string;
   author?: {
@@ -61,6 +63,7 @@ export function normalizeBlogPost(blog: BlogSource): BlogPost {
     title: blog.title || "",
     excerpt: blog.excerpt || "",
     content: Array.isArray(blog.content) ? blog.content : [],
+    body: Array.isArray(blog.body) ? blog.body : null,
     date: formatBlogDate(blog.publishedAt),
     image: blog.image || "",
     category: blog.category || "",

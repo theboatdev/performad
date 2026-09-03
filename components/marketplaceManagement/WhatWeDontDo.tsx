@@ -9,9 +9,10 @@ const Icon = () => (
   <div className="bg-primary rounded-lg px-2 items-center">
     <Image unoptimized
       src={'/icon.png'}
-      width={"10px"}
-      height={"10px"}
+      width={10}
+      height={10}
       className=""
+      alt=""
     />
   </div>
 );
@@ -48,7 +49,7 @@ export default function WhatWeDontDo() {
             <Image unoptimized
               src="/What we don't do.jpg"
               alt="What we don't do"
-              layout="fill"
+              fill
               className="object-cover rounded-xl shadow-lg"
             />
           </div>

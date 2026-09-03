@@ -25,10 +25,8 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, horizontal = false }) => {
                     </h3>
                     <div className="flex items-center justify-between mt-auto">
                         <span className="text-sm text-gray-500">{blog.date}</span>
-                        <Link href={`/blogs/${blog.id}`}>
-                            <a className="flex items-center gap-1 text-sm font-semibold text-primary hover:underline">
+                        <Link href={`/blogs/${blog.id}`} className="flex items-center gap-1 text-sm font-semibold text-primary hover:underline">
                                 Read More <ChevronRight size={14} />
-                            </a>
                         </Link>
                     </div>
                 </div>
@@ -59,10 +57,8 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, horizontal = false }) => {
                         {blog.date}
                     </span>
                 </div>
-                <Link href={`/blogs/${blog.id}`}>
-                    <a className="inline-flex items-center gap-2 mt-auto text-sm font-bold text-primary hover:gap-3 transition-all">
+                <Link href={`/blogs/${blog.id}`} className="inline-flex items-center gap-2 mt-auto text-sm font-bold text-primary hover:gap-3 transition-all">
                         Read More <ChevronRight size={16} />
-                    </a>
                 </Link>
             </div>
         </div>

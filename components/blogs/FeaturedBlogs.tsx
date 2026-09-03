@@ -38,10 +38,11 @@ const FeaturedBlogs: React.FC<FeaturedBlogsProps> = ({ blogs }) => {
                         </p>
                         <div className="flex items-center gap-4">
                             <span className="text-sm font-medium">{mainFeatured.date}</span>
-                            <Link href={`/blogs/${mainFeatured.id}`}>
-                                <a className="px-6 py-2 text-sm font-bold text-white transition-all bg-primary rounded-full hover:bg-opacity-90">
-                                    Read More
-                                </a>
+                            <Link
+                                href={`/blogs/${mainFeatured.id}`}
+                                className="px-6 py-2 text-sm font-bold text-white transition-all bg-primary rounded-full hover:bg-opacity-90"
+                            >
+                                Read More
                             </Link>
                         </div>
                     </div>
