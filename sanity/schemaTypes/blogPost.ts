@@ -30,9 +30,11 @@ export const blogPost = defineType({
     }),
     defineField({
       name: "mainImage",
-      title: "Main image",
+      title: "Main image (1920×1080, max 1MB)",
       type: "image",
       options: { hotspot: true },
+      description:
+        "Cover image for cards, featured section, and the post page. Use 16:9 (1920×1080 recommended); keep under 1MB.",
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -63,9 +65,11 @@ export const blogPost = defineType({
         }),
         defineField({
           name: "photo",
-          title: "Photo",
+          title: "Photo (400×400, max 1MB)",
           type: "image",
           options: { hotspot: true },
+          description:
+            "Square author avatar. 400×400 recommended (shown as a circle on the site); keep under 1MB.",
         }),
       ],
     }),
@@ -128,7 +132,10 @@ export const blogPost = defineType({
         }),
         defineArrayMember({
           type: "image",
+          title: "Image (1200×675, max 1MB)",
           options: { hotspot: true },
+          description:
+            "Inline body image. 16:9 around 1200×675 recommended; keep under 1MB.",
           fields: [
             defineField({
               name: "alt",

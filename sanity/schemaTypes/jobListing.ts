@@ -10,6 +10,14 @@ export const JOB_CATEGORIES = [
   { title: "Operations", value: "Operations" },
 ];
 
+export const JOB_LOCATIONS = [
+  { title: "Remote", value: "Remote" },
+  { title: "Hybrid", value: "Hybrid" },
+  { title: "Onsite", value: "Onsite" },
+  { title: "Part-time", value: "Part-time" },
+  { title: "Full-time", value: "Full-time" },
+];
+
 export const jobListing = defineType({
   name: "jobListing",
   title: "Job Listing",
@@ -45,6 +53,10 @@ export const jobListing = defineType({
       name: "location",
       title: "Location",
       type: "string",
+      options: {
+        list: JOB_LOCATIONS,
+        layout: "dropdown",
+      },
       initialValue: "Remote",
       validation: (rule) => rule.required(),
     }),
@@ -57,10 +69,11 @@ export const jobListing = defineType({
     }),
     defineField({
       name: "image",
-      title: "Image",
+      title: "Image (1600×900, max 1MB)",
       type: "image",
       options: { hotspot: true },
-      description: "Optional cover image for the job listing.",
+      description:
+        "Optional cover for the job card and detail page. Use 16:9 (1600×900 recommended); keep under 1MB.",
     }),
     defineField({
       name: "tags",
